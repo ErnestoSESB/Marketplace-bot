@@ -4,6 +4,8 @@ from logger import logger
 
 def main():
 
+    print("Bot iniciado...")
+
     logger.info("================================")
     logger.info("Bot iniciado")
     logger.info("================================")
@@ -11,15 +13,31 @@ def main():
     publisher = MarketplacePublisher()
 
     try:
+        print("Iniciando navegador...")
+
         publisher.iniciar()
-        publisher.abrir_facebook()
 
-        input(
-            "Facebook aberto. Pressione ENTER para fechar..."
-        )
+        print("Abrindo Facebook...")
 
-    except Exception:
+        login_ok = publisher.abrir_facebook()
+
+        if not login_ok:
+            print("Aguardando login...")
+
+            input(
+                "Faça o login no Facebook e pressione ENTER..."
+            )
+
+        print("Login concluído.")
+        print("Automação pronta.")
+
+    except Exception as e:
+        print("\nERRO:")
+        print(e)
+
         logger.exception("Erro durante execução.")
+
+        input("\nPressione ENTER para fechar...")
 
     finally:
         publisher.fechar()
