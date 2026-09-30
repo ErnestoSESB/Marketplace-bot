@@ -1,11 +1,11 @@
 ANUNCIO = {
     "titulo": "Criação de Sites Profissionais",
 
-    "preco": "500",
+    "preco": "1",
 
-    "categoria": "Serviços",
+    "categoria": "Móveis",
 
-    "localizacao": "Almino Afonso - RN",
+    "localizacao": "Natal",
 
     "descricao": """
 Criamos sites profissionais, modernos e responsivos
@@ -15,8 +15,12 @@ Entre em contato para solicitar um orçamento.
 """,
 
     "imagens": [
-        "imagens/imagem1.jpg",
-        "imagens/imagem2.jpg",
-        "imagens/imagem3.jpg",
+        "imagens/image1.png",
+        "imagens/image2.png",
+        "imagens/image3.png",
+        "imagens/image4.png",
+        "imagens/image5.png",
+        "imagens/image6.png",
+        "imagens/image7.png",
     ]
 }
